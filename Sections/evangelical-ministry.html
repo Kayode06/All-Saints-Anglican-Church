@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Evangelical Ministry | All Saints' Anglican Church, Yaba</title>
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../img/favicon_io/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-logo">
+    <img src="../img/BackgroundEraser_20260615_112451169.png" alt="">
+    <p>All Saints' Yaba <br><i>Diocese of Lagos Mainland · Anglican Communion</i></p>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../history.html">History</a></li>
+    <li><a href="../index.html#sermons">Sermons</a></li>
+    <li><a href="../index.html#events">Events</a></li>
+    <li><a href="../index.html#news">News</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li><a href="../index.html#giving" class="nav-give">Give</a></li>
+  </ul>
+</nav>
+
+<!-- ══ SUBPAGE HERO ══ -->
+<header class="subpage-hero">
+  <p class="subpage-hero__crumb"><a href="../index.html">Home</a> &rsaquo; <a href="../index.html#sections">Sections</a> &rsaquo; The Evangelical Ministry</p>
+  <h1>The Evangelical Ministry</h1>
+</header>
+
+<!-- ══ CONTENT ══ -->
+<main class="subpage-content">
+  <p class="subpage-intro">
+    The Evangelical Ministry carries the Gospel beyond the walls of All Saints', through
+    outreach at home and the daughter churches planted from this parish.
+  </p>
+
+  <ul class="subpage-list">
+    <li class="subpage-list__item">
+      <p class="subpage-list__name">The Evangelical Group</p>
+      <p class="subpage-list__note">Leads outreach and evangelism efforts for the parish.</p>
+    </li>
+    <li class="subpage-list__item">
+      <p class="subpage-list__name">Daughter Churches</p>
+      <p class="subpage-list__note">Congregations planted and nurtured from All Saints'.</p>
+    </li>
+  </ul>
+
+  <a class="subpage-back" href="../index.html#sections">&larr; Back to Sections</a>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>All Saints' Anglican Church</h5>
+      <p>A house of prayer for all people, gathered in worship and sent out in service within the Diocese of Lagos Mainland, Church of Nigeria (Anglican Communion).</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="../index.html#story">Our Story</a></li>
+        <li><a href="../index.html#sermons">Sermons</a></li>
+        <li><a href="../index.html#events">Events</a></li>
+        <li><a href="../index.html#news">News</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <div class="social-row">
+        <a href="https://www.facebook.com/allsaintsanglicanchurchyaba/" target="_blank" title="Facebook"><img src="../img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/allsaintsanglicanchurchyaba/" target="_blank" title="Instagram"><img src="../img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@AllSaintsAnglicanYaba?sub_confirmation=1" target="_blank" title="YouTube"><img src="../img/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 All Saints' Anglican Church Yaba. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
