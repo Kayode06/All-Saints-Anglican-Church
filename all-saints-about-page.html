@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - All Saints' Anglican Church Yaba</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ══ HERO SECTION ══ */
+    .hero{
+      background-image: url(img/maxresdefault.jpg);
+      color: white;
+      text-align: center;
+    }
+
+    /* ══ SHEPHERDS SECTION ══ */
+    .shepherds-section {
+      padding: 4rem 2rem;
+      background: white;
+    }
+
+    .shepherds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .shepherd-card {
+      background: var(--ivory);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .shepherd-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .shepherd-image {
+      width: 100%;
+      height: 280px;
+      background: var(--light-gray);
+      overflow: hidden;
+    }
+
+    .shepherd-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .shepherd-info {
+      padding: 2rem;
+    }
+
+    .shepherd-name {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .shepherd-title {
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .shepherd-bio {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .shepherd-contact {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .shepherd-contact a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .shepherd-contact a:hover {
+      color: var(--navy);
+    }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 768px) {
+    #hero-inner{font-size: 10px;
+      margin-bottom: 20px;
+    }
+    .shepherds-grid { grid-template-columns: 1fr;}
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ══ NAVIGATION ══ -->
+  <nav>
+    <div class="nav-logo">
+      <img src="img/BackgroundEraser_20260615_112451169.png" alt="All Saints' Logo">
+      <p>All Saints' Anglican Church Yaba <br><i>Diocese of Lagos Mainland · Anglican Communion</i></p>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#history">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#shepherds">Shepherds</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+  <div class="hero-bg">
+    <img class="hero-slide" src="img/front of the chrch.jpg" alt="image 1">
+    <img class="hero-slide" src="img/maxresdefault.jpg" alt="image 2">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+  <div id="hero-inner">
+    <h1>About All Saints' Anglican Church</h1>
+    <p>A vibrant community rooted in faith, tradition, and service to our beloved city of Lagos</p>
+  </div>
+</section>
+
+  <!-- ══ OUR STORY ══ -->
+<section id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div>
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">A Brief History</h2>
+        <div class="section-rule"></div>
+        <h3>Founded in Faith, Growing in Grace</h3>
+          <p class="section-body">
+            All Saints' Anglican Church Yaba has stood as a beacon of faith in the heart of Yaba for generations. Established in the rich Anglican tradition, our church has been a spiritual home to countless families, a place where the Gospel is proclaimed faithfully and lives are transformed by Christ's love.
+          </p>
+          <p class="section-body">
+            Throughout our history, we have remained steadfast in our commitment to preaching the Word of God, celebrating the sacraments, and serving our community with compassion and integrity. Our parish has grown from a small gathering to a vibrant congregation that reflects the diversity and warmth of Lagos.
+          </p>
+          <p class="section-body">
+            We believe that every person is created in the image of God, and we exist to draw people into a living, transformative relationship with Jesus Christ. Rooted in the liturgical traditions of the Anglican Communion and guided by Scripture, we blend reverent worship with Spirit-filled ministry.
+          </p>
+      </div>
+      <div class="story-img-box">
+        <div class="img-placeholder"><img src="img/IMG_20260614_125649.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ══ GALLERY ══ -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-label">Visual Moments</p>
+        <h2 class="section-title">Church Gallery</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="img/front of the chrch.jpg" alt="Sanctuary view">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Sanctuary</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/sddefault.jpg" alt="Worship service">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Sunday Worship</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/gallery-3.jpg" alt="Community service">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Community Outreach</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/gallery-4.jpg" alt="Choir ministry">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Choir Ministry</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/gallery-5.jpg" alt="Children's ministry">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Children's Ministry</div>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/gallery-6.jpg" alt="Fellowship gathering">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-text">Fellowship</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SHEPHERDS ══ -->
+  <section id="shepherds" class="shepherds-section">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-label">Church Leadership</p>
+        <h2 class="section-title">Our Shepherds</h2>
+        <div class="divider"></div>
+      </div>
+
+      <!-- <div class="shepherds-grid">
+        <div class="shepherd-card">
+          <div class="shepherd-image">
+            <img src="img/rector.jpg" alt="Rector">
+          </div>
+          <div class="shepherd-info">
+            <div class="shepherd-name">Rev. Dr. Okonkwo</div>
+            <div class="shepherd-title">Rector</div>
+            <p class="shepherd-bio">
+              Serving as Rector for over 15 years, Rev. Dr. Okonkwo brings deep spiritual wisdom and pastoral care to our congregation, leading us in faithful proclamation of God's Word.
+            </p>
+            <div class="shepherd-contact">
+              <a href="mailto:rector@allsaintsyaba.org">Email</a>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="shepherd-card">
+          <div class="shepherd-image">
+            <img src="img/vicar.jpg" alt="Vicar">
+          </div>
+          <div class="shepherd-info">
+            <div class="shepherd-name"> </div>
+            <div class="shepherd-title">Vicar</div>
+            <p class="shepherd-bio"> </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>All Saints' Anglican Church</h5>
+      <p>A house of prayer for all people, gathered in worship and sent out in service within the Diocese of Lagos Mainland, Church of Nigeria (Anglican Communion).</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#sermons">Sermons</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#news">News</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Follow Us</h5>
+      <div class="social-row">
+        <a href="https://www.facebook.com/allsaintsanglicanchurchyaba/" target="_blank" title="Facebook">FB</a>
+        <a href="https://www.instagram.com/allsaintsanglicanchurchyaba/" target="_blank" title="Instagram">IG</a>
+        <a href="https://www.youtube.com/@AllSaintsAnglicanYaba?sub_confirmation=1" target="_blank" title="YouTube">YT</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <span>© 2026 All Saints' Anglican Church Yaba. All rights reserved.</span>
+  </div>
+</footer>s
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+    
+    document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+  </script>
+</body>
+</html>
