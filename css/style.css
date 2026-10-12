@@ -266,15 +266,22 @@ nav {
   overflow: hidden;
 }
 
+/* each slide is a <picture> so phones can load their own image set */
 .hero-slide {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0;
   animation: heroSlideFade 25s infinite;
+}
+.hero-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-slide:nth-child(1) { animation-delay: 0s; }
@@ -424,6 +431,41 @@ nav {
   width: 100%;
   height: 2px;
   background: var(--green);
+}
+
+/* ==========================
+   QUICK LINKS (under hero)
+   ========================== */
+.quick-links {
+  background: #000000;
+  padding: 26px 20px;
+}
+.quick-links-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.quick-btn {
+  display: block;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.quick-btn:hover,
+.quick-btn:focus-visible {
+  background: var(--white);
+  color: #000000;
+  outline: none;
+}
+@media (max-width: 700px) {
+  .quick-links-inner { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }
 
 
@@ -921,6 +963,25 @@ section {
 }
 .contact-item a:hover {
   color: var(--blue);
+}
+
+/* contact map */
+.contact-map {
+  margin-top: 40px;
+  width: 100%;
+  height: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+@media (max-width: 700px) {
+  .contact-map { height: 300px; margin-top: 30px; }
 }
 
 /* ==========================
