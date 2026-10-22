@@ -967,12 +967,12 @@ section {
 
 /* contact map */
 .contact-map {
-  margin-top: 40px;
-  width: 100%;
+  width: 90%;
   height: 380px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #ddd;
+  margin-left: -80px;
 }
 .contact-map iframe {
   width: 100%;
@@ -981,9 +981,13 @@ section {
   display: block;
 }
 @media (max-width: 700px) {
-  .contact-map { height: 300px; margin-top: 30px; }
+  .contact-map { height: 250px; margin-top: 10px; margin-left: 23px; }
+  .contact-item2{ margin-left: 65px;}
 }
 
+.contact-item2 h4{
+  margin-top: 50px;
+}
 /* ==========================
    FOOTER
    ========================== */
@@ -1058,7 +1062,7 @@ footer {
 @media (max-width: 800px) {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
 }
-
+#YT{background-color: white; border-radius: 50%;}
 /* =============================================================================
    ABOUT US PAGE — page header / banner
    ============================================================================= */
