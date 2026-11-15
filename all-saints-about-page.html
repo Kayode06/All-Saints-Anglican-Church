@@ -30,101 +30,7 @@
       margin-top: 10px;
     }
 
-    /* ══ SHEPHERDS SECTION ══ */
-    .shepherds-section {
-      padding: 4rem 2rem;
-      background: white;
-    }
 
-    .shepherds-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin-top: 2rem;
-    }
-
-    .shepherd-card {
-      background: var(--ivory);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .shepherd-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .shepherd-image {
-      width: 100%;
-      height: 280px;
-      background: var(--light-gray);
-      overflow: hidden;
-    }
-
-    .shepherd-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .shepherd-info {
-      padding: 2rem;
-    }
-
-    .shepherd-name {
-      font-family: 'Crimson Text', serif;
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 0.25rem;
-    }
-
-    .shepherd-title {
-      font-size: 0.85rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .shepherd-bio {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .shepherd-contact {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .shepherd-contact a {
-      color: var(--gold);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .shepherd-contact a:hover {
-      color: var(--navy);
-    }
-
-    /* ══ RESPONSIVE ══ */
-    @media (max-width: 768px) {
-    #hero-inner{font-size: 10px;
-      margin-bottom: 20px;
-    }
-    .shepherds-grid { grid-template-columns: 1fr;}
-    }
-
-    @media (max-width: 480px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 <body>
@@ -260,42 +166,11 @@
             <img src="img/Vicar img-1.jpg" alt="Vicar">
           </div>
           <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
+            <div class="shepherd-name">Ven. Jimi Ebesuwa</div>
             <div class="shepherd-title">Vicar</div>
             <p class="shepherd-bio">
               Serving as the vicar of All All Saints Anglican Church Yaba, Ven. J. Ebesuwa brings deep spiritual wisdom and pastoral care to our congregation, leading us in faithful proclamation of God's Word.
             </p>
-          </div>
-        </div>
-
-        <div class="shepherd-card">
-          <div class="shepherd-image">
-            <img src="img/priests/priest 1.jpg" alt="Assisting Priest">
-          </div>
-          <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            
-          </div>
-        </div>
-        <div class="shepherd-card">
-          <div class="shepherd-image">
-            <img src="img/priests/priest 2.jpg" alt="Assisting Priest">
-          </div>
-          <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            
-          </div>
-        </div>
-        <div class="shepherd-card">
-          <div class="shepherd-image">
-            <img src="img/priests/priest 3.jpg" alt="Assisting Priest">
-          </div>
-          <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            
           </div>
         </div>
         <div class="shepherd-card">
@@ -303,8 +178,11 @@
             <img src="img/priests/priest 4.jpg" alt="Assisting Priest">
           </div>
           <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
+            <div class="shepherd-name">Ven. Stevenson Adedeji</div>
             <div class="shepherd-title">Assisting Priest</div>
+            <p class="shepherd-bio">
+              Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Ven. S. Adedeji provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
+            </p>
           </div>
         </div>
         <div class="shepherd-card">
@@ -312,11 +190,49 @@
             <img src="img/priests/priest 5.jpg" alt="Assisting Priest">
           </div>
           <div class="shepherd-info">
-            <div class="shepherd-name">Ven. J. Ebesuwa</div>
+            <div class="shepherd-name">Rev. Canon. Sebestian Ejofor</div>
             <div class="shepherd-title">Assisting Priest</div>
+            <p class="shepherd-bio">
+              Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. Canon. S. Ejofor provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
+            </p>
           </div>
         </div>
-
+        <div class="shepherd-card">
+          <div class="shepherd-image">
+            <img src="img/priests/priest 2.jpg" alt="Assisting Priest">
+          </div>
+          <div class="shepherd-info">
+            <div class="shepherd-name">Rev. Tunde Ogungbe</div>
+            <div class="shepherd-title">Assisting Priest</div>
+            <p class="shepherd-bio">
+              Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. T. Ogungbe provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word. 
+            </p>
+          </div>
+        </div>
+        <div class="shepherd-card">
+          <div class="shepherd-image">
+            <img src="img/priests/priest 3.jpg" alt="Assisting Priest">
+          </div>
+          <div class="shepherd-info">
+            <div class="shepherd-name">Rev. Olabisi Ashaju</div>
+            <div class="shepherd-title">Assisting Priest</div>
+            <p class="shepherd-bio">
+              Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. O. Ashaju provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word. 
+            </p>
+          </div>
+        </div>
+        <div class="shepherd-card">
+          <div class="shepherd-image">
+            <img src="img/priests/priest 1.jpg" alt="Assisting Priest">
+          </div>
+          <div class="shepherd-info">
+            <div class="shepherd-name">Rev. Adekunle Adebiyi</div>
+            <div class="shepherd-title">Assisting Priest</div>
+            <p class="shepherd-bio">
+              Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. A. Adebiyi provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
