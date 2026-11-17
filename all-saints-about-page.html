@@ -112,6 +112,131 @@
       color: var(--navy);
     }
 
+    /* ══ SHEPHERD POP-UP ══ */
+    .shepherd-title{
+      cursor: pointer;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .shepherd-title:hover,
+    .shepherd-title:focus-visible{
+      color: var(--navy);
+      border-bottom-color: var(--gold);
+      outline: none;
+    }
+    .shepherd-title::after{
+      content: " – View profile";
+      text-transform: none;
+      font-weight: 500;
+      letter-spacing: 0;
+      opacity: 0.75;
+    }
+    .shepherd-full-bio{ display: none; }
+
+    .shepherd-modal{
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      background: rgba(10, 20, 40, 0.75);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .shepherd-modal.open{
+      opacity: 1;
+      visibility: visible;
+    }
+    .shepherd-modal-box{
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      width: 100%;
+      max-width: 860px;
+      max-height: 90vh;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      transform: translateY(24px);
+      transition: transform 0.3s ease;
+    }
+    .shepherd-modal.open .shepherd-modal-box{
+      transform: translateY(0);
+    }
+    .shepherd-modal-img{
+      background: var(--light-gray);
+      min-height: 320px;
+    }
+    .shepherd-modal-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .shepherd-modal-body{
+      padding: 2.5rem 2rem 2rem;
+      overflow-y: auto;
+    }
+    .shepherd-modal-name{
+      font-family: 'Crimson Text', serif;
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+    .shepherd-modal-title{
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .shepherd-modal-text p{
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .shepherd-modal-close{
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.3s ease;
+    }
+    .shepherd-modal-close:hover,
+    .shepherd-modal-close:focus-visible{
+      background: var(--gold);
+      outline: none;
+    }
+    body.modal-open{ overflow: hidden; }
+
+    @media (max-width: 700px){
+      .shepherd-modal-box{
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+      }
+      .shepherd-modal-img{ min-height: 0; height: 260px; }
+      .shepherd-modal-body{ overflow: visible; padding: 1.5rem 1.25rem; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .shepherd-modal, .shepherd-modal-box{ transition: none; }
+    }
+
     /* ══ RESPONSIVE ══ */
     @media (max-width: 768px) {
     #hero-inner{font-size: 10px;
@@ -261,10 +386,14 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Ven. Jimi Ebesuwa</div>
-            <div class="shepherd-title">Vicar</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Vicar</div>
+            <!-- <p class="shepherd-bio">
               Serving as the vicar of All All Saints Anglican Church Yaba, Ven. J. Ebesuwa brings deep spiritual wisdom and pastoral care to our congregation, leading us in faithful proclamation of God's Word.
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>As Vicar, Ven. Jimi Ebesuwa oversees the spiritual life and pastoral care of All Saints' Anglican Church Yaba. He leads the congregation in worship, the preaching of God's Word and the celebration of the sacraments.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service, areas of focus, and a personal message to the congregation.]</p>
+            </div>
           </div>
         </div>
         <div class="shepherd-card">
@@ -273,10 +402,14 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Ven. Stevenson Adedeji</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Assisting Priest</div>
+            <!-- <p class="shepherd-bio">
               Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Ven. S. Adedeji provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>Ven. Stevenson Adedeji serves as an Assisting Priest under the Vicar, Ven. Jimi Ebesuwa, sharing in the pastoral and sacramental ministry of the parish.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service and areas of focus.]</p>
+            </div>
           </div>
         </div>
         <div class="shepherd-card">
@@ -285,10 +418,14 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Rev. Canon. Sebestian Ejofor</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Assisting Priest</div>
+            <!-- <p class="shepherd-bio">
               Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. Canon. S. Ejofor provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>Rev. Canon Sebestian Ejofor serves as an Assisting Priest under the Vicar, Ven. Jimi Ebesuwa, sharing in the pastoral and sacramental ministry of the parish.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service and areas of focus.]</p>
+            </div>
           </div>
         </div>
         <div class="shepherd-card">
@@ -297,10 +434,14 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Rev. Tunde Ogungbe</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Assisting Priest</div>
+            <!-- <p class="shepherd-bio">
               Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. T. Ogungbe provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word. 
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>Rev. Tunde Ogungbe serves as an Assisting Priest under the Vicar, Ven. Jimi Ebesuwa, sharing in the pastoral and sacramental ministry of the parish.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service and areas of focus.]</p>
+            </div>
           </div>
         </div>
         <div class="shepherd-card">
@@ -309,10 +450,14 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Rev. Olabisi Ashaju</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Assisting Priest</div>
+            <!-- <p class="shepherd-bio">
               Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. O. Ashaju provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word. 
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>Rev. Olabisi Ashaju serves as an Assisting Priest under the Vicar, Ven. Jimi Ebesuwa, sharing in the pastoral and sacramental ministry of the parish.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service and areas of focus.]</p>
+            </div>
           </div>
         </div>
         <div class="shepherd-card">
@@ -321,15 +466,32 @@
           </div>
           <div class="shepherd-info">
             <div class="shepherd-name">Rev. Adekunle Adebiyi</div>
-            <div class="shepherd-title">Assisting Priest</div>
-            <p class="shepherd-bio">
+            <div class="shepherd-title" tabindex="0" role="button">Assisting Priest</div>
+            <!-- <p class="shepherd-bio">
               Serving as an Assisting priest of All All Saints Anglican Church Yaba, Under the Vicar Ven. Jimi Ebesuwa, Rev. A. Adebiyi provide more spiritual and plays a pastoral role for the congregation, Leading in faithful proclamation of God's word.
-            </p>
+            </p> -->
+            <div class="shepherd-full-bio">
+              <p>Rev. Adekunle Adebiyi serves as an Assisting Priest under the Vicar, Ven. Jimi Ebesuwa, sharing in the pastoral and sacramental ministry of the parish.</p>
+              <p>[Add a fuller write-up here: background, call to ministry, years of service and areas of focus.]</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ══ SHEPHERD POP-UP ══ -->
+  <div class="shepherd-modal" id="shepherdModal" aria-hidden="true">
+    <div class="shepherd-modal-box" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="shepherd-modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="shepherd-modal-img"><img id="modalImg" src="" alt=""></div>
+      <div class="shepherd-modal-body">
+        <h3 class="shepherd-modal-name" id="modalName"></h3>
+        <div class="shepherd-modal-title" id="modalTitle"></div>
+        <div class="shepherd-modal-text" id="modalText"></div>
+      </div>
+    </div>
+  </div>
 
 <!-- ══ FOOTER ══ -->
 <footer>
@@ -360,7 +522,7 @@
   <div class="footer-bottom">
     <span>© 2026 All Saints' Anglican Church Yaba. All rights reserved.</span>
   </div>
-</footer>s
+</footer>
 
   <script>
     // Mobile menu toggle
@@ -384,6 +546,50 @@
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
   });
+  // Shepherd pop-up
+  (function () {
+    const modal = document.getElementById('shepherdModal');
+    const mImg = document.getElementById('modalImg');
+    const mName = document.getElementById('modalName');
+    const mTitle = document.getElementById('modalTitle');
+    const mText = document.getElementById('modalText');
+    let lastFocused = null;
+
+    function openModal(card) {
+      const img = card.querySelector('.shepherd-image img');
+      mImg.src = img.getAttribute('src');
+      mImg.alt = card.querySelector('.shepherd-name').textContent;
+      mName.textContent = card.querySelector('.shepherd-name').textContent;
+      mTitle.textContent = card.querySelector('.shepherd-title').childNodes[0].textContent.trim();
+      mText.innerHTML = card.querySelector('.shepherd-full-bio').innerHTML;
+      lastFocused = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      document.getElementById('modalClose').focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll('.shepherd-title').forEach(title => {
+      const card = title.closest('.shepherd-card');
+      title.addEventListener('click', () => openModal(card));
+      title.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
+      });
+    });
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  })();
   </script>
 </body>
 </html>
